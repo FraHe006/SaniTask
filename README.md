@@ -102,11 +102,6 @@ servidor.
 Abre la carpeta `SaniTask/` con Godot Engine y ejecuta la escena principal
 (`WindowsDesktop.tscn` o `inicioSesion.tscn`, según corresponda).
 
-## Manual de usuario
-
-El manual de usuario detallado, junto con una explicación en vídeo del funcionamiento de
-la aplicación, se encuentra disponible en la documentación del proyecto.
-
 ## Problemas conocidos
 
 - Al borrar un empleado o un paciente, el registro se elimina correctamente de la base de
