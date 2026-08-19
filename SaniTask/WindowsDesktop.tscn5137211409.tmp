@@ -1,0 +1,2172 @@
+[gd_scene load_steps=59 format=3 uid="uid://0xjic6hdqdbu"]
+
+[ext_resource type="FontFile" uid="uid://c0k7xj6g40ny2" path="res://w95fa/W95FA.otf" id="1_1xjxg"]
+[ext_resource type="Script" uid="uid://dq87fm3fd7r0f" path="res://funcionesGenerales.gd" id="1_47bfg"]
+[ext_resource type="Texture2D" uid="uid://dq1gouw34uhb1" path="res://PatchRegular.png" id="3_ltw6v"]
+[ext_resource type="Texture2D" uid="uid://cqeqdks7rgmcg" path="res://PatchInverted.png" id="3_t55fe"]
+[ext_resource type="FontFile" uid="uid://dscwp0pxouyv7" path="res://w95fa/w95fa.woff" id="5_ltw6v"]
+[ext_resource type="Texture2D" uid="uid://b8b1g5e6krpbd" path="res://caduceus_3000154.png" id="5_rht41"]
+[ext_resource type="Shader" uid="uid://1h5l82d2g0o1" path="res://WindowsDesktop.gdshader" id="6_wc1si"]
+[ext_resource type="Script" uid="uid://c8c1qlo2ud8h4" path="res://time.gd" id="7_10tv0"]
+[ext_resource type="Texture2D" uid="uid://h1mtj60tx5mj" path="res://Calculator_Win9x.png" id="7_ce2of"]
+[ext_resource type="Texture2D" uid="uid://blomnidge7we6" path="res://f60110908531b216f172609e0720a61f-removebg-preview.png" id="9_47bfg"]
+[ext_resource type="FontFile" uid="uid://dcbd4s1pg558w" path="res://w95fa/w95fa.woff2" id="11_cq66o"]
+[ext_resource type="Script" uid="uid://2ng2q1odjnl6" path="res://Calculadora.gd" id="11_lw8ii"]
+[ext_resource type="Script" uid="uid://0o705jfonl4w" path="res://listaNotas.gd" id="15_rht41"]
+[ext_resource type="Script" uid="uid://bi7ktn0ax6sdr" path="res://listaEmpleados.gd" id="16_34eoy"]
+[ext_resource type="Script" uid="uid://b5gph7fp3c6gk" path="res://editorNotas.gd" id="16_q3f7k"]
+[ext_resource type="Script" uid="uid://bmbyt63n0yojh" path="res://fichaTecnica.gd" id="17_5vx1g"]
+[ext_resource type="Texture2D" uid="uid://nrm8ij3g77ye" path="res://gingerbread_18636305.png" id="17_34eoy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3liy"]
+bg_color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wc1si"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("3_ltw6v")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ltw6v"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+texture = ExtResource("3_t55fe")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1xjxg"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+texture = ExtResource("3_t55fe")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t55fe"]
+draw_center = false
+border_width_top = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t55fe"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ce2of"]
+shader = ExtResource("6_wc1si")
+shader_parameter/SCREEN_HEIGHT = 240.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47bfg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohp6d"]
+texture = ExtResource("7_ce2of")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47bfg"]
+texture = ExtResource("7_ce2of")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m516i"]
+texture = ExtResource("7_ce2of")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10tv0"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_right = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rht41"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_right = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3f7k"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_right = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34eoy"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5vx1g"]
+texture = ExtResource("3_ltw6v")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibkqf"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b1r1x"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mcc64"]
+texture = ExtResource("9_47bfg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cq66o"]
+texture = ExtResource("9_47bfg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lw8ii"]
+texture = ExtResource("9_47bfg")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_10tv0"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bv8o"]
+texture = ExtResource("3_ltw6v")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ib6q"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1yoap"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q3f7k"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_we5d6"]
+texture = ExtResource("3_ltw6v")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uyqdf"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1t6tc"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2aftl"]
+texture = ExtResource("17_34eoy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1gelv"]
+texture = ExtResource("17_34eoy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pb6q3"]
+texture = ExtResource("17_34eoy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wbha"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1grbk"]
+texture = ExtResource("3_ltw6v")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ur52k"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4wt47"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_slg2n"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bsksu"]
+texture = ExtResource("3_ltw6v")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t3msh"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_80a5i"]
+texture = ExtResource("3_ltw6v")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ibkqf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_47bfg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.5019608, 0.5019608, 1)
+
+[node name="Panel" type="Panel" parent="."]
+top_level = true
+clip_children = 2
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i3liy")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -56.0
+offset_right = 168.0
+offset_bottom = -6.0
+grow_vertical = 0
+scale = Vector2(1.0034786, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1xjxg")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_wc1si")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ltw6v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1xjxg")
+text = "SaniTask"
+icon = ExtResource("5_rht41")
+expand_icon = true
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t55fe")
+
+[node name="TimePanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -56.0
+offset_right = -16.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_t55fe")
+
+[node name="Label" type="Label" parent="Panel/TimePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ltw6v")
+theme_override_font_sizes/font_size = 30
+text = "12:30 PM"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_10tv0")
+
+[node name="Shaders" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ce2of")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.8888889
+theme_override_styles/panel = SubResource("StyleBoxEmpty_47bfg")
+metadata/_edit_use_anchors_ = true
+
+[node name="CalculadoraBoton" type="Button" parent="Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048611112
+anchor_top = 0.06944445
+anchor_right = 0.104166664
+anchor_bottom = 0.15277778
+theme_override_styles/normal = SubResource("StyleBoxTexture_ohp6d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_47bfg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m516i")
+
+[node name="Calculadora" type="Window" parent="Panel2"]
+oversampling_override = 1.0
+title = "Calculadora"
+initial_position = 1
+size = Vector2i(400, 400)
+visible = false
+unresizable = true
+theme_override_fonts/title_font = ExtResource("11_cq66o")
+theme_override_font_sizes/title_font_size = 20
+
+[node name="ColorRect" type="ColorRect" parent="Panel2/Calculadora"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+
+[node name="Shaders" type="ColorRect" parent="Panel2/Calculadora"]
+material = SubResource("ShaderMaterial_ce2of")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pantalla" type="LineEdit" parent="Panel2/Calculadora"]
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.0325
+anchor_right = 0.96
+anchor_bottom = 0.11
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ltw6v")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_10tv0")
+theme_override_styles/read_only = SubResource("StyleBoxTexture_rht41")
+theme_override_styles/focus = SubResource("StyleBoxTexture_q3f7k")
+placeholder_text = "0"
+alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Panel2/Calculadora"]
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.15
+anchor_right = 0.96
+anchor_bottom = 0.95
+theme_override_styles/panel = SubResource("StyleBoxTexture_34eoy")
+script = ExtResource("11_lw8ii")
+metadata/_edit_use_anchors_ = true
+
+[node name="0" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -19.257727
+anchor_top = -5.705083
+anchor_right = -19.127295
+anchor_bottom = -5.555083
+offset_left = 7206.8438
+offset_top = 2065.6265
+offset_right = 7206.8438
+offset_bottom = 2065.6265
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "0
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="1" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -9.893672
+anchor_top = -2.8990312
+anchor_right = -9.763237
+anchor_bottom = -2.749031
+offset_left = 3840.8713
+offset_top = 1099.69
+offset_right = 3840.8713
+offset_bottom = 1099.69
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "1
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -6.789401
+anchor_top = -1.781049
+anchor_right = -6.658966
+anchor_bottom = -1.6310489
+offset_left = 2618.4995
+offset_top = 741.93567
+offset_right = 2618.4995
+offset_bottom = 741.93567
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "2
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.6851296
+anchor_top = -0.663067
+anchor_right = -3.554695
+anchor_bottom = -0.51306695
+offset_left = 1396.1277
+offset_top = 384.18143
+offset_right = 1396.1277
+offset_bottom = 384.18143
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "3
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.250347
+anchor_top = -0.863067
+anchor_right = -3.1199121
+anchor_bottom = -0.71306694
+offset_left = 1396.1277
+offset_top = 384.18143
+offset_right = 1396.1277
+offset_bottom = 384.18143
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "4
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.6789016
+anchor_top = -0.27496862
+anchor_right = -1.5484667
+anchor_bottom = -0.124968626
+offset_left = 737.83575
+offset_top = 195.98996
+offset_right = 737.83575
+offset_bottom = 195.98996
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "5
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="6" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.9516066
+anchor_top = 0.0429224
+anchor_right = -0.8211718
+anchor_bottom = 0.1929224
+offset_left = 390.19122
+offset_top = 94.26485
+offset_right = 390.19122
+offset_bottom = 94.26485
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "6
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="9" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01274026
+anchor_top = -0.0014608384
+anchor_right = 0.14317504
+anchor_bottom = 0.14853916
+offset_left = 195.31158
+offset_top = 44.467484
+offset_right = 195.31158
+offset_bottom = 44.467484
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "9
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="8" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066470765
+anchor_top = 0.08265629
+anchor_right = 0.19690555
+anchor_bottom = 0.23265629
+offset_left = 95.53876
+offset_top = 17.549988
+offset_right = 95.53876
+offset_bottom = 17.549988
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "8
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="7" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.024102086
+anchor_top = 0.12812501
+anchor_right = 0.1063327
+anchor_bottom = 0.278125
+offset_left = 48.869568
+offset_top = 2.9999962
+offset_right = 48.869568
+offset_bottom = 3.0
+theme_override_colors/font_color = Color(0.0004444875, 0, 0.55963, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "7
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="igual" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5283554
+anchor_top = 0.678125
+anchor_right = 0.7022684
+anchor_bottom = 0.803125
+offset_left = 5.565216
+offset_top = 31.0
+offset_right = 5.565216
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "="
+metadata/_edit_use_anchors_ = true
+
+[node name="Cero" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06521739
+anchor_top = 0.775
+anchor_right = 0.23913044
+anchor_bottom = 0.9
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "C"
+metadata/_edit_use_anchors_ = true
+
+[node name="restar" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -35.52394
+anchor_top = -11.477401
+anchor_right = -35.37177
+anchor_bottom = -11.302401
+offset_left = 13360.811
+offset_top = 3776.7683
+offset_right = 13360.811
+offset_bottom = 3776.7683
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "-"
+metadata/_edit_use_anchors_ = true
+
+[node name="sumar" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -18.801207
+anchor_top = -6.330083
+anchor_right = -18.649033
+anchor_bottom = -6.1550827
+offset_left = 7206.8438
+offset_top = 2065.6265
+offset_right = 7206.8438
+offset_bottom = 2065.6265
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "+
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="multiplicar" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -35.52394
+anchor_top = -11.277401
+anchor_right = -35.37177
+anchor_bottom = -11.1024
+offset_left = 13360.811
+offset_top = 3776.7683
+offset_right = 13360.811
+offset_bottom = 3776.7683
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "x"
+metadata/_edit_use_anchors_ = true
+
+[node name="dividir" type="Button" parent="Panel2/Calculadora/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -35.52394
+anchor_top = -11.077401
+anchor_right = -35.37177
+anchor_bottom = -10.902401
+offset_left = 13360.811
+offset_top = 3776.7683
+offset_right = 13360.811
+offset_bottom = 3776.7683
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vx1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibkqf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b1r1x")
+text = "/"
+metadata/_edit_use_anchors_ = true
+
+[node name="NotasBoton" type="Button" parent="Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048611112
+anchor_top = 0.20833333
+anchor_right = 0.097222224
+anchor_bottom = 0.29166666
+grow_vertical = 2
+pivot_offset = Vector2(-16, -120)
+theme_override_styles/normal = SubResource("StyleBoxTexture_mcc64")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cq66o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lw8ii")
+metadata/_edit_use_anchors_ = true
+
+[node name="Notas" type="Window" parent="Panel2"]
+oversampling_override = 1.0
+title = "Mis notas"
+initial_position = 2
+size = Vector2i(400, 500)
+visible = false
+unresizable = true
+theme_override_fonts/title_font = ExtResource("11_cq66o")
+theme_override_font_sizes/title_font_size = 25
+script = ExtResource("15_rht41")
+
+[node name="ColorRect" type="ColorRect" parent="Panel2/Notas"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+
+[node name="Shaders" type="ColorRect" parent="Panel2/Notas"]
+material = SubResource("ShaderMaterial_ce2of")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel2/Notas"]
+anchors_preset = -1
+anchor_left = 0.060000025
+anchor_top = 0.044
+anchor_right = 0.94
+anchor_bottom = 0.83
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_34eoy")
+metadata/_edit_use_anchors_ = true
+
+[node name="ListaNotas" type="ItemList" parent="Panel2/Notas/Panel"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hovered_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hovered_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/panel = SubResource("StyleBoxEmpty_10tv0")
+metadata/_edit_use_anchors_ = true
+
+[node name="BotonNuevaNota" type="Button" parent="Panel2/Notas"]
+custom_minimum_size = Vector2(0, 50)
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.86
+anchor_right = 0.9
+anchor_bottom = 0.975
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_1bv8o")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7ib6q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1yoap")
+text = "Nueva nota"
+metadata/_edit_use_anchors_ = true
+
+[node name="Editor" type="Window" parent="Panel2/Notas"]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(500, 400)
+visible = false
+unresizable = true
+theme_override_fonts/title_font = ExtResource("11_cq66o")
+theme_override_font_sizes/title_font_size = 25
+script = ExtResource("16_q3f7k")
+
+[node name="ColorRect" type="ColorRect" parent="Panel2/Notas/Editor"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+
+[node name="Shaders" type="ColorRect" parent="Panel2/Notas/Editor"]
+material = SubResource("ShaderMaterial_ce2of")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel2/Notas/Editor"]
+anchors_preset = -1
+anchor_left = 0.046666667
+anchor_top = 0.05
+anchor_right = 0.9533333
+anchor_bottom = 0.83
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_34eoy")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="Panel2/Notas/Editor/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_q3f7k")
+placeholder_text = "- Nombre de la nota
+- Contenido"
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="BotonGuardar" type="Button" parent="Panel2/Notas/Editor"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 10.0
+offset_top = 340.0
+offset_right = 244.0
+offset_bottom = 390.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.000113827744, 0.00011382807, 0.00011382859, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_we5d6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uyqdf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1t6tc")
+text = "Guardar
+"
+
+[node name="BotonBorrar" type="Button" parent="Panel2/Notas/Editor"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 258.0
+offset_top = 340.0
+offset_right = 490.0
+offset_bottom = 390.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_we5d6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uyqdf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1t6tc")
+text = "Borrar"
+
+[node name="GestionPacientesBoton" type="Button" parent="Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048611112
+anchor_top = 0.33333334
+anchor_right = 0.104166664
+anchor_bottom = 0.44444445
+theme_override_styles/normal = SubResource("StyleBoxTexture_2aftl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1gelv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pb6q3")
+metadata/_edit_use_anchors_ = true
+
+[node name="GestionPacientes" type="Window" parent="Panel2"]
+oversampling_override = 1.0
+title = "Gestión de pacientes"
+initial_position = 1
+size = Vector2i(400, 500)
+visible = false
+unresizable = true
+theme_override_fonts/title_font = ExtResource("11_cq66o")
+theme_override_font_sizes/title_font_size = 25
+
+[node name="ColorRect" type="ColorRect" parent="Panel2/GestionPacientes"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Shaders" type="ColorRect" parent="Panel2/GestionPacientes"]
+material = SubResource("ShaderMaterial_ce2of")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="Panel2/GestionPacientes"]
+anchors_preset = -1
+anchor_left = 0.08
+anchor_top = 0.038
+anchor_right = 0.92
+anchor_bottom = 0.108
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0wbha")
+placeholder_text = "Buscar..."
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Panel2/GestionPacientes"]
+anchors_preset = -1
+anchor_left = 0.07999997
+anchor_top = 0.14
+anchor_right = 0.92
+anchor_bottom = 0.828
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_34eoy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Panel2/GestionPacientes"]
+anchors_preset = -1
+anchor_left = 0.12
+anchor_top = 0.86
+anchor_right = 0.88
+anchor_bottom = 0.972
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_1grbk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ur52k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4wt47")
+text = "Agegar paciente"
+metadata/_edit_use_anchors_ = true
+
+[node name="Historial" type="Window" parent="Panel2/GestionPacientes"]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(1200, 800)
+visible = false
+unresizable = true
+
+[node name="ColorRect" type="ColorRect" parent="Panel2/GestionPacientes/Historial"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Shaders" type="ColorRect" parent="Panel2/GestionPacientes/Historial"]
+material = SubResource("ShaderMaterial_ce2of")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DatosPersonales" type="Panel" parent="Panel2/GestionPacientes/Historial"]
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.035
+anchor_right = 0.42666668
+anchor_bottom = 0.535
+offset_bottom = -3.0517578e-05
+theme_override_styles/panel = SubResource("StyleBoxTexture_slg2n")
+metadata/_edit_use_anchors_ = true
+
+[node name="NombreLabel" type="Label" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.06
+anchor_right = 0.36065573
+anchor_bottom = 0.12
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Nombre completo"
+metadata/_edit_use_anchors_ = true
+
+[node name="Nombre" type="LineEdit" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.14000002
+anchor_right = 0.93442625
+anchor_bottom = 0.22
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="FechaNacimientoLabel" type="Label" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.24
+anchor_right = 0.36065573
+anchor_bottom = 0.3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Fecha de nacimiento"
+metadata/_edit_use_anchors_ = true
+
+[node name="FechaNacimiento" type="LineEdit" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.32
+anchor_right = 0.44262296
+anchor_bottom = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="GeneroLabel" type="Label" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55737704
+anchor_top = 0.24
+anchor_right = 0.852459
+anchor_bottom = 0.3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Género"
+metadata/_edit_use_anchors_ = true
+
+[node name="Genero" type="LineEdit" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55737704
+anchor_top = 0.32
+anchor_right = 0.93442625
+anchor_bottom = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="SangreLabel" type="Label" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.42
+anchor_right = 0.36065573
+anchor_bottom = 0.48
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Grupo sanguíneo"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sangre" type="LineEdit" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.5
+anchor_right = 0.44262296
+anchor_bottom = 0.58
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="rhLabel" type="Label" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 0
+anchor_left = 0.55737704
+anchor_top = 0.42
+anchor_right = 0.852459
+anchor_bottom = 0.48
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "RH"
+metadata/_edit_use_anchors_ = true
+
+[node name="RH" type="LineEdit" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55737704
+anchor_top = 0.5
+anchor_right = 0.93442625
+anchor_bottom = 0.58
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="dniLabel" type="Label" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.6
+anchor_right = 0.36065573
+anchor_bottom = 0.66
+offset_top = -1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "DNI"
+metadata/_edit_use_anchors_ = true
+
+[node name="dni" type="LineEdit" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.68
+anchor_right = 0.44262296
+anchor_bottom = 0.76
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="tarjetaSanitariaLabel" type="Label" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55737704
+anchor_top = 0.6
+anchor_right = 0.852459
+anchor_bottom = 0.66
+offset_top = -1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Núm. tarjeta sanitaria"
+metadata/_edit_use_anchors_ = true
+
+[node name="tarjetaSanitaria" type="LineEdit" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55737704
+anchor_top = 0.68
+anchor_right = 0.93442625
+anchor_bottom = 0.76
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="telefonoLabel" type="Label" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.78
+anchor_right = 0.36065573
+anchor_bottom = 0.84
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Teléfono"
+metadata/_edit_use_anchors_ = true
+
+[node name="telefono" type="LineEdit" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06557377
+anchor_top = 0.86
+anchor_right = 0.44262296
+anchor_bottom = 0.94
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="correoLabel" type="Label" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55737704
+anchor_top = 0.78
+anchor_right = 0.852459
+anchor_bottom = 0.84
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Correo"
+metadata/_edit_use_anchors_ = true
+
+[node name="correo" type="LineEdit" parent="Panel2/GestionPacientes/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55737704
+anchor_top = 0.86
+anchor_right = 0.93442625
+anchor_bottom = 0.94
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Historia" type="Panel" parent="Panel2/GestionPacientes/Historial"]
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.565
+anchor_right = 0.58666664
+anchor_bottom = 0.965
+theme_override_styles/panel = SubResource("StyleBoxTexture_slg2n")
+metadata/_edit_use_anchors_ = true
+
+[node name="AntecedentesFamiliaresLabelbreLabel" type="Label" parent="Panel2/GestionPacientes/Historial/Historia"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.047058824
+anchor_top = 0.075
+anchor_right = 0.31764707
+anchor_bottom = 0.15
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Antecedentes familiares"
+metadata/_edit_use_anchors_ = true
+
+[node name="AntecedentesFamiliares" type="TextEdit" parent="Panel2/GestionPacientes/Historial/Historia"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.047058824
+anchor_top = 0.175
+anchor_right = 0.9529412
+anchor_bottom = 0.475
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+wrap_mode = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="VacunasLabel" type="Label" parent="Panel2/GestionPacientes/Historial/Historia"]
+layout_mode = 0
+anchor_left = 0.047058824
+anchor_top = 0.5
+anchor_right = 0.31764707
+anchor_bottom = 0.575
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Vacunas"
+metadata/_edit_use_anchors_ = true
+
+[node name="Vacunas" type="TextEdit" parent="Panel2/GestionPacientes/Historial/Historia"]
+layout_mode = 0
+anchor_left = 0.047058824
+anchor_top = 0.6
+anchor_right = 0.47058824
+anchor_bottom = 0.925
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+wrap_mode = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="HabitosLabel" type="Label" parent="Panel2/GestionPacientes/Historial/Historia"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5294118
+anchor_top = 0.5
+anchor_right = 0.8
+anchor_bottom = 0.575
+offset_left = -3.0517578e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Hábitos"
+metadata/_edit_use_anchors_ = true
+
+[node name="Habitos" type="TextEdit" parent="Panel2/GestionPacientes/Historial/Historia"]
+layout_mode = 0
+anchor_left = 0.5294118
+anchor_top = 0.6
+anchor_right = 0.9529412
+anchor_bottom = 0.925
+offset_left = -3.0517578e-05
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+wrap_mode = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Medicacion" type="Panel" parent="Panel2/GestionPacientes/Historial"]
+anchors_preset = -1
+anchor_left = 0.6066667
+anchor_top = 0.035
+anchor_right = 0.98
+anchor_bottom = 0.965
+theme_override_styles/panel = SubResource("StyleBoxTexture_slg2n")
+metadata/_edit_use_anchors_ = true
+
+[node name="AlergiasLabel" type="Label" parent="Panel2/GestionPacientes/Historial/Medicacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071428575
+anchor_top = 0.032258064
+anchor_right = 0.5066964
+anchor_bottom = 0.06451613
+offset_right = 1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_80a5i")
+text = "Alergias"
+metadata/_edit_use_anchors_ = true
+
+[node name="Alergias" type="TextEdit" parent="Panel2/GestionPacientes/Historial/Medicacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071428575
+anchor_top = 0.07526882
+anchor_right = 0.9285714
+anchor_bottom = 0.25806454
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+wrap_mode = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="EnfermedadesCronicasLabel" type="Label" parent="Panel2/GestionPacientes/Historial/Medicacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071428575
+anchor_top = 0.26881722
+anchor_right = 0.5066964
+anchor_bottom = 0.30107528
+offset_right = 1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_80a5i")
+text = "Enfermedades crónicas"
+metadata/_edit_use_anchors_ = true
+
+[node name="EnfermedadesCronicas" type="TextEdit" parent="Panel2/GestionPacientes/Historial/Medicacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071428575
+anchor_top = 0.31182796
+anchor_right = 0.9285714
+anchor_bottom = 0.49462366
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+wrap_mode = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TratamientoActualLabel" type="Label" parent="Panel2/GestionPacientes/Historial/Medicacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071428575
+anchor_top = 0.50537634
+anchor_right = 0.5066964
+anchor_bottom = 0.53763443
+offset_right = 1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_80a5i")
+text = "Tratamiento actual"
+metadata/_edit_use_anchors_ = true
+
+[node name="TratamientoActual" type="TextEdit" parent="Panel2/GestionPacientes/Historial/Medicacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071428575
+anchor_top = 0.5483871
+anchor_right = 0.9285714
+anchor_bottom = 0.7311828
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+wrap_mode = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CirugiasLabel" type="Label" parent="Panel2/GestionPacientes/Historial/Medicacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071428575
+anchor_top = 0.7419355
+anchor_right = 0.5066964
+anchor_bottom = 0.7741935
+offset_right = 1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_80a5i")
+text = "Cirugías previas"
+metadata/_edit_use_anchors_ = true
+
+[node name="Cirugias" type="TextEdit" parent="Panel2/GestionPacientes/Historial/Medicacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071428575
+anchor_top = 0.78494626
+anchor_right = 0.9285714
+anchor_bottom = 0.9677419
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+wrap_mode = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Caduceus3000154" type="Sprite2D" parent="Panel2/GestionPacientes/Historial"]
+position = Vector2(620, 152)
+scale = Vector2(0.32812494, 0.359375)
+texture = ExtResource("5_rht41")
+
+[node name="BotonGuardar" type="Button" parent="Panel2/GestionPacientes/Historial"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 560.0
+offset_top = 276.0
+offset_right = 680.0
+offset_bottom = 326.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.000113827744, 0.00011382807, 0.00011382859, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_we5d6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uyqdf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1t6tc")
+text = "Guardar
+"
+
+[node name="BotonBorrar" type="Button" parent="Panel2/GestionPacientes/Historial"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 560.0
+offset_top = 356.0
+offset_right = 680.0
+offset_bottom = 406.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_we5d6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uyqdf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1t6tc")
+text = "Borrar"
+
+[node name="GestionEmpleados" type="Window" parent="Panel2"]
+oversampling_override = 1.0
+title = "Gestión de empleados"
+initial_position = 2
+size = Vector2i(400, 500)
+theme_override_fonts/title_font = ExtResource("11_cq66o")
+theme_override_font_sizes/title_font_size = 25
+script = ExtResource("16_34eoy")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Panel2/GestionEmpleados"]
+
+[node name="ColorRect" type="ColorRect" parent="Panel2/GestionEmpleados"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Shaders" type="ColorRect" parent="Panel2/GestionEmpleados"]
+material = SubResource("ShaderMaterial_ce2of")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="Panel2/GestionEmpleados"]
+anchors_preset = -1
+anchor_left = 0.08
+anchor_top = 0.038
+anchor_right = 0.92
+anchor_bottom = 0.108
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0wbha")
+placeholder_text = "Buscar..."
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Panel2/GestionEmpleados"]
+anchors_preset = -1
+anchor_left = 0.07999997
+anchor_top = 0.14
+anchor_right = 0.92
+anchor_bottom = 0.828
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_34eoy")
+metadata/_edit_use_anchors_ = true
+
+[node name="ListaEmpleados" type="ItemList" parent="Panel2/GestionEmpleados/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ibkqf")
+
+[node name="Button" type="Button" parent="Panel2/GestionEmpleados"]
+anchors_preset = -1
+anchor_left = 0.12
+anchor_top = 0.86
+anchor_right = 0.88
+anchor_bottom = 0.972
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_1grbk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ur52k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4wt47")
+text = "Agegar empleado"
+metadata/_edit_use_anchors_ = true
+
+[node name="Historial" type="Window" parent="Panel2/GestionEmpleados"]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(1000, 400)
+visible = false
+unresizable = true
+script = ExtResource("17_5vx1g")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Panel2/GestionEmpleados/Historial"]
+
+[node name="ColorRect" type="ColorRect" parent="Panel2/GestionEmpleados/Historial"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Shaders" type="ColorRect" parent="Panel2/GestionEmpleados/Historial"]
+material = SubResource("ShaderMaterial_ce2of")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DatosPersonales" type="Panel" parent="Panel2/GestionEmpleados/Historial"]
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.05
+anchor_right = 0.436
+anchor_bottom = 0.95000005
+offset_left = 8.0
+offset_right = 8.0
+offset_bottom = -3.0517578e-05
+theme_override_styles/panel = SubResource("StyleBoxTexture_slg2n")
+metadata/_edit_use_anchors_ = true
+
+[node name="NombreLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.080267556
+anchor_top = 0.06666667
+anchor_right = 0.4528302
+anchor_bottom = 0.13333336
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Nombre completo"
+metadata/_edit_use_anchors_ = true
+
+[node name="Nombre" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08026757
+anchor_top = 0.15555555
+anchor_right = 0.9245283
+anchor_bottom = 0.22222222
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="dniLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.080267586
+anchor_top = 0.24444446
+anchor_right = 0.4528302
+anchor_bottom = 0.31111106
+offset_top = -1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "DNI"
+metadata/_edit_use_anchors_ = true
+
+[node name="dni" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.080267586
+anchor_top = 0.33333334
+anchor_right = 0.4140214
+anchor_bottom = 0.33866662
+offset_right = 16.454926
+offset_bottom = 22.080017
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="FechaNacimientoLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5618729
+anchor_top = 0.24444446
+anchor_right = 0.9245283
+anchor_bottom = 0.31111112
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Fecha de nacimiento"
+metadata/_edit_use_anchors_ = true
+
+[node name="FechaNacimiento" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5618729
+anchor_top = 0.33333334
+anchor_right = 0.92307687
+anchor_bottom = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="telefonoLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08026757
+anchor_top = 0.42222217
+anchor_right = 0.44147155
+anchor_bottom = 0.48888886
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Teléfono"
+metadata/_edit_use_anchors_ = true
+
+[node name="telefono" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08026757
+anchor_top = 0.51111114
+anchor_right = 0.44147155
+anchor_bottom = 0.5777778
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="correoLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5618729
+anchor_top = 0.42222217
+anchor_right = 0.92307687
+anchor_bottom = 0.48888886
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Correo"
+metadata/_edit_use_anchors_ = true
+
+[node name="correo" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5618729
+anchor_top = 0.5111111
+anchor_right = 0.92307687
+anchor_bottom = 0.57777774
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="numEmpleadoLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08026757
+anchor_top = 0.6
+anchor_right = 0.44147155
+anchor_bottom = 0.6666667
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Número de empleado"
+metadata/_edit_use_anchors_ = true
+
+[node name="numEmpleado" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08026757
+anchor_top = 0.6888889
+anchor_right = 0.44147155
+anchor_bottom = 0.75555557
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="fechaAltaLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5618729
+anchor_top = 0.59999996
+anchor_right = 0.92307687
+anchor_bottom = 0.6666666
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Fecha de alta"
+metadata/_edit_use_anchors_ = true
+
+[node name="fechaAlta" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5618729
+anchor_top = 0.6888889
+anchor_right = 0.92307687
+anchor_bottom = 0.75555557
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="unidadLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08026757
+anchor_top = 0.7777778
+anchor_right = 0.44147155
+anchor_bottom = 0.84444445
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Servicio / Unidad"
+metadata/_edit_use_anchors_ = true
+
+[node name="unidad" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08026757
+anchor_top = 0.8666667
+anchor_right = 0.44147158
+anchor_bottom = 0.93333334
+offset_right = -1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="catProfesionalLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5618729
+anchor_top = 0.7777778
+anchor_right = 0.92307687
+anchor_bottom = 0.84444445
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Categoría profesional"
+metadata/_edit_use_anchors_ = true
+
+[node name="catProfesional" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/DatosPersonales"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5618729
+anchor_top = 0.8666667
+anchor_right = 0.92307687
+anchor_bottom = 0.93333334
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Documentacion" type="Panel" parent="Panel2/GestionEmpleados/Historial"]
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.05
+anchor_right = 0.436
+anchor_bottom = 0.95000005
+offset_left = 544.0
+offset_right = 544.0
+offset_bottom = -3.0517578e-05
+theme_override_styles/panel = SubResource("StyleBoxTexture_slg2n")
+metadata/_edit_use_anchors_ = true
+
+[node name="TitulacionLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.066666655
+anchor_right = 0.52830184
+anchor_bottom = 0.13333333
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Titulación"
+metadata/_edit_use_anchors_ = true
+
+[node name="Titulacion" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.15555555
+anchor_right = 0.92137325
+anchor_bottom = 0.22222222
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="NumColegiacionLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.24444446
+anchor_right = 0.52830184
+anchor_bottom = 0.31111112
+offset_left = 2.2888184e-05
+offset_right = 3.0517578e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Número colegiación"
+metadata/_edit_use_anchors_ = true
+
+[node name="NumColegiacion" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.33333334
+anchor_right = 0.9245283
+anchor_bottom = 0.4
+offset_left = 2.2888184e-05
+offset_right = 1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CertificacionesLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.42222226
+anchor_right = 0.52830184
+anchor_bottom = 0.4888889
+offset_top = -1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Certificaciones específicas"
+metadata/_edit_use_anchors_ = true
+
+[node name="Certificaciones" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.51111114
+anchor_right = 0.8857194
+anchor_bottom = 0.51644444
+offset_right = 16.454926
+offset_bottom = 22.080017
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ReconocimientoLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.6
+anchor_right = 0.52830184
+anchor_bottom = 0.6666667
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Reconocimiento médico"
+metadata/_edit_use_anchors_ = true
+
+[node name="Reconocimiento" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.68888885
+anchor_right = 0.92452824
+anchor_bottom = 0.75555557
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="VacunacionesLabel" type="Label" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.7777778
+anchor_right = 0.52830184
+anchor_bottom = 0.84444445
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bsksu")
+text = "Vacunaciones"
+metadata/_edit_use_anchors_ = true
+
+[node name="Vacunaciones" type="LineEdit" parent="Panel2/GestionEmpleados/Historial/Documentacion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07547165
+anchor_top = 0.8666667
+anchor_right = 0.92452824
+anchor_bottom = 0.93333334
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3msh")
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="BotonGuardar" type="Button" parent="Panel2/GestionEmpleados/Historial"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 452.0
+offset_top = 36.0
+offset_right = 548.0
+offset_bottom = 86.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.000113827744, 0.00011382807, 0.00011382859, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_we5d6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uyqdf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1t6tc")
+text = "Guardar
+"
+
+[node name="BotonBorrar" type="Button" parent="Panel2/GestionEmpleados/Historial"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 452.0
+offset_top = 100.0
+offset_right = 548.0
+offset_bottom = 150.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_cq66o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_we5d6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uyqdf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1t6tc")
+text = "Borrar"
+
+[connection signal="pressed" from="Panel2/CalculadoraBoton" to="." method="_on_calculadora_boton_pressed"]
+[connection signal="close_requested" from="Panel2/Calculadora" to="." method="_on_window_close_requested"]
+[connection signal="pressed" from="Panel2/NotasBoton" to="." method="_on_notas_boton_pressed"]
+[connection signal="close_requested" from="Panel2/Notas" to="." method="_on_notas_close_requested"]
+[connection signal="pressed" from="Panel2/Notas/BotonNuevaNota" to="Panel2/Notas" method="_on_boton_nueva_nota_pressed"]
+[connection signal="close_requested" from="Panel2/Notas/Editor" to="Panel2/Notas/Editor" method="_on_close_requested"]
+[connection signal="pressed" from="Panel2/Notas/Editor/BotonGuardar" to="Panel2/Notas/Editor" method="_on_boton_guardar_pressed"]
+[connection signal="pressed" from="Panel2/Notas/Editor/BotonBorrar" to="Panel2/Notas/Editor" method="_on_boton_borrar_pressed"]
+[connection signal="pressed" from="Panel2/GestionPacientesBoton" to="." method="_on_gestion_pacientes_boton_pressed"]
+[connection signal="close_requested" from="Panel2/GestionPacientes" to="." method="_on_gestion_pacientes_close_requested"]
+[connection signal="close_requested" from="Panel2/GestionEmpleados" to="." method="_on_gestion_empleados_close_requested"]
+[connection signal="request_completed" from="Panel2/GestionEmpleados/HTTPRequest" to="Panel2/GestionEmpleados" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="Panel2/GestionEmpleados/Button" to="Panel2/GestionEmpleados" method="_on_button_pressed"]
+[connection signal="close_requested" from="Panel2/GestionEmpleados/Historial" to="Panel2/GestionEmpleados" method="_on_historial_close_requested"]
+[connection signal="request_completed" from="Panel2/GestionEmpleados/Historial/HTTPRequest" to="Panel2/GestionEmpleados/Historial" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="Panel2/GestionEmpleados/Historial/BotonGuardar" to="Panel2/GestionEmpleados/Historial" method="_on_boton_guardar_pressed"]
+[connection signal="pressed" from="Panel2/GestionEmpleados/Historial/BotonBorrar" to="Panel2/GestionEmpleados/Historial" method="_on_boton_borrar_pressed"]

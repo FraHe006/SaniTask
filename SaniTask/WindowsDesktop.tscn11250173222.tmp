@@ -1,0 +1,207 @@
+[gd_scene load_steps=23 format=3 uid="uid://0xjic6hdqdbu"]
+
+[ext_resource type="FontFile" uid="uid://c0k7xj6g40ny2" path="res://w95fa/W95FA.otf" id="1_1xjxg"]
+[ext_resource type="Script" uid="uid://d0wq6qm1g64i1" path="res://gestorInicial.gd" id="1_mcc64"]
+[ext_resource type="Texture2D" uid="uid://bmtdmdxhn2a25" path="res://Flag.png" id="2_t55fe"]
+[ext_resource type="Texture2D" uid="uid://dq1gouw34uhb1" path="res://PatchRegular.png" id="3_ltw6v"]
+[ext_resource type="Texture2D" uid="uid://cqeqdks7rgmcg" path="res://PatchInverted.png" id="3_t55fe"]
+[ext_resource type="FontFile" uid="uid://dscwp0pxouyv7" path="res://w95fa/w95fa.woff" id="5_ltw6v"]
+[ext_resource type="Shader" uid="uid://1h5l82d2g0o1" path="res://WindowsDesktop.gdshader" id="6_wc1si"]
+[ext_resource type="Texture2D" uid="uid://h1mtj60tx5mj" path="res://Calculator_Win9x.png" id="7_ce2of"]
+[ext_resource type="Script" uid="uid://bo2ccf2r44y7h" path="res://abrirCalculadora.gd" id="8_47bfg"]
+[ext_resource type="Texture2D" uid="uid://djvhl7n1aop86" path="res://std_thumb.png" id="8_ohp6d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3liy"]
+bg_color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wc1si"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("3_ltw6v")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ltw6v"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+texture = ExtResource("3_t55fe")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1xjxg"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+texture = ExtResource("3_t55fe")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t55fe"]
+draw_center = false
+border_width_top = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t55fe"]
+texture = ExtResource("3_t55fe")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ce2of"]
+shader = ExtResource("6_wc1si")
+shader_parameter/SCREEN_HEIGHT = 240.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohp6d"]
+texture = ExtResource("7_ce2of")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ce2of"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohp6d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47bfg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mcc64"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mcc64")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.5019608, 0.5019608, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i3liy")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -56.0
+offset_right = 168.0
+offset_bottom = -6.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1xjxg")
+theme_override_font_sizes/font_size = 43
+theme_override_styles/normal = SubResource("StyleBoxTexture_wc1si")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ltw6v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1xjxg")
+text = "Start "
+icon = ExtResource("2_t55fe")
+expand_icon = true
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t55fe")
+
+[node name="TimePanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -56.0
+offset_right = -16.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_t55fe")
+
+[node name="Label" type="Label" parent="Panel/TimePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ltw6v")
+theme_override_font_sizes/font_size = 30
+text = "12:30 PM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Shaders" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ce2of")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -44.0
+offset_right = 52.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ohp6d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ce2of")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ohp6d")
+script = ExtResource("8_47bfg")
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(400, 400)
+borderless = true
+max_size = Vector2i(400, 800)
+theme_override_styles/embedded_border = SubResource("StyleBoxEmpty_47bfg")
+theme_override_styles/embedded_unfocused_border = SubResource("StyleBoxEmpty_mcc64")
+
+[node name="TextureRect" type="TextureRect" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ohp6d")
+expand_mode = 3
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

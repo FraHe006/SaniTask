@@ -1,0 +1,218 @@
+[gd_scene load_steps=15 format=3 uid="uid://dhyk2yie4iggp"]
+
+[ext_resource type="Shader" uid="uid://1h5l82d2g0o1" path="res://WindowsDesktop.gdshader" id="1_d2wrl"]
+[ext_resource type="Texture2D" uid="uid://cqeqdks7rgmcg" path="res://PatchInverted.png" id="1_e3byt"]
+[ext_resource type="Texture2D" uid="uid://bu8duqcuki2k0" path="res://llave.png" id="2_d2wrl"]
+[ext_resource type="Script" uid="uid://c4lahbeor8olu" path="res://iniciarSesion.gd" id="2_e2f1n"]
+[ext_resource type="FontFile" uid="uid://dcbd4s1pg558w" path="res://w95fa/w95fa.woff2" id="2_fj775"]
+[ext_resource type="Texture2D" uid="uid://dq1gouw34uhb1" path="res://PatchRegular.png" id="3_24jir"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vngkr"]
+shader = ExtResource("1_d2wrl")
+shader_parameter/SCREEN_HEIGHT = 240.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fj775"]
+shader = ExtResource("1_d2wrl")
+shader_parameter/SCREEN_HEIGHT = 240.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24jir"]
+texture = ExtResource("1_e3byt")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e2f1n"]
+texture = ExtResource("3_24jir")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dnobv"]
+texture = ExtResource("1_e3byt")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jl6xa"]
+texture = ExtResource("3_24jir")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ijblg"]
+texture = ExtResource("1_e3byt")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oxn4x"]
+texture = ExtResource("1_e3byt")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.5019608, 0.5019608, 1)
+
+[node name="Shaders" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_vngkr")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(600, 300)
+unresizable = true
+script = ExtResource("2_e2f1n")
+
+[node name="ColorRect" type="ColorRect" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+
+[node name="Shaders" type="ColorRect" parent="Window"]
+material = SubResource("ShaderMaterial_fj775")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Llave" type="Sprite2D" parent="Window"]
+position = Vector2(68, 130.00002)
+rotation = 1.2308869
+scale = Vector2(0.22718899, 0.28492472)
+texture = ExtResource("2_d2wrl")
+
+[node name="InicioSesion" type="Panel" parent="Window"]
+anchors_preset = -1
+anchor_left = 0.6066667
+anchor_top = 0.315
+anchor_right = 1.3133334
+anchor_bottom = 0.92833334
+offset_left = -224.0
+offset_top = -68.5
+offset_right = -224.0
+offset_bottom = -68.5
+theme_override_styles/panel = SubResource("StyleBoxTexture_24jir")
+metadata/_edit_use_anchors_ = true
+
+[node name="NombreLabel" type="Label" parent="Window/InicioSesion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0566038
+anchor_top = 0.13043481
+anchor_right = 0.49187163
+anchor_bottom = 0.2608696
+offset_right = 1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fj775")
+theme_override_styles/normal = SubResource("StyleBoxTexture_e2f1n")
+text = "Nombre de usuario"
+metadata/_edit_use_anchors_ = true
+
+[node name="Nombre" type="TextEdit" parent="Window/InicioSesion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0566038
+anchor_top = 0.30434787
+anchor_right = 0.9433961
+anchor_bottom = 0.47101456
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fj775")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dnobv")
+wrap_mode = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CodigoLabel" type="Label" parent="Window/InicioSesion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0566038
+anchor_top = 0.52173907
+anchor_right = 0.49187163
+anchor_bottom = 0.6521739
+offset_right = 1.5258789e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fj775")
+theme_override_styles/normal = SubResource("StyleBoxTexture_e2f1n")
+text = "Codigo de empleado"
+metadata/_edit_use_anchors_ = true
+
+[node name="Codigo" type="TextEdit" parent="Window/InicioSesion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0566038
+anchor_top = 0.69565207
+anchor_right = 0.9433961
+anchor_bottom = 0.8623187
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fj775")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dnobv")
+wrap_mode = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="login" type="Button" parent="Window/InicioSesion"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = 16.0
+offset_right = 76.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fj775")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_jl6xa")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ijblg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oxn4x")
+text = "Iniciar sesión"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Window"]
+
+[connection signal="pressed" from="Window/InicioSesion/login" to="Window" method="_on_login_pressed"]
+[connection signal="request_completed" from="Window/HTTPRequest" to="Window" method="_on_http_request_request_completed"]
