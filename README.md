@@ -100,7 +100,7 @@ servidor.
 ### Cliente
 
 Abre la carpeta `SaniTask/` con Godot Engine y ejecuta la escena principal
-(`WindowsDesktop.tscn` o `inicioSesion.tscn`, según corresponda).
+(`inicioSesion.tscn`).
 
 ## Problemas conocidos
 
